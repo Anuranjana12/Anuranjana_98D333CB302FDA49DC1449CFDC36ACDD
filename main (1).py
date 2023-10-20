@@ -1,11 +1,19 @@
-num = int(input("Enter a number: "))
-sum = 0
-temp = num
-while temp > 0:
-   digit = temp % 10
-   sum += digit ** 3
-   temp //= 10
-if num == sum:
-   print(num,"is an Armstrong number")
+string = 'amaama'
+half = int(len(string) / 2)
+
+
+first_str = string[:half]
+second_str = string[half:]
+
+
+# symmetric
+if first_str == second_str:
+  print(string, 'string is symmetrical')
 else:
-   print(num,"is not an Armstrong number")
+  print(string, 'string is not symmetrical')
+
+# palindrome
+if first_str == second_str[::-1]: # ''.join(reversed(second_str)) [slower]
+  print(string, 'string is palindrome')
+else:
+  print(string, 'string is not palindrome')
